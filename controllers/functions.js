@@ -2,7 +2,6 @@
 
 //  creates unit id
 import { v4 as uuidv4 } from 'uuid';
-import user_model from '../models/user_model.js';
 
 let user_list = []; // we leave it empty to add users by post request. `let` is used because we change the user_list at delete
 

@@ -179,45 +179,7 @@ In `users.js` we replace the code block with these functions names.
 ---
 
 
-### Setting up mongo db database
+### Next step: Setting up mongo db database
+On branch node-express-db
 
-npm install mongoose
-```javascript
-import mongoose from 'mongoose';
-```
-
-
-```javascript
-const CONNECTION_URL = "mongodb+srv://<username>:<password>@cluster0.frghl.mongodb.net/<data_basename>?retryWrites=true&w=majority";
-mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`))) // what to do when we connection is made
-  .catch((error) => console.log(`${error} did not connect`)); // what if it goes wrong
-mongoose.set('useFindAndModify', false);
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```error
-import { Mongoose } from 'mongoose';
-         ^^^^^^^^
-SyntaxError: Named export 'Mongoose' not found. The requested module 'mongoose' is a CommonJS module, which may not support all module.exports as named exports.
-CommonJS modules can always be imported via the default export, for example using:
-
-import pkg from 'mongoose';
-const { Mongoose } = pkg;
-```
+---
